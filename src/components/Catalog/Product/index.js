@@ -8,6 +8,7 @@ import clock from '../../../assets/images/clock.svg';
 import smile from '../../../assets/images/smile.svg';
 import players from '../../../assets/images/players.svg';
 import QuantitySelect from '../../QuantitySelect';
+import Button from '../../Button';
 
 // == Component
 const Product = () => (
@@ -28,13 +29,9 @@ const Product = () => (
           <p className="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pharetra vel turpis nunc eget lorem dolor sed viverra. Pretium viverra suspendisse potenti nullam ac tortor. Vitae purus adeas pulvinar sape.</p>
           <div className="addToCart">
             <form className="addToCartForm">
-              {/* <select className="productQuantity">
-                <option value="1" selected> 1</option>
-                <option value="2"> 2</option>
-                <option value="3"> 3</option>
-              </select> */}
               <QuantitySelect maxQuantity="10" />
-              <button className="addToCartButton" type="submit">Ajouter au panier</button>
+              <Button label="Ajouter au panier" colorCode="#419641" />
+              {/* <button className="addToCartButton" type="submit">Ajouter au panier</button> */}
             </form>
           </div>
         </div>
