@@ -28,8 +28,8 @@ const cart = () => (
           <td><img className="productImage" src={boardGame} alt="productImage" /></td>
           <td>Product Name</td>
           <td><QuantitySelect maxQuantity="10" /></td>
-          <td>Prix unitaire</td>
-          <td>Prix total</td>
+          <td>XXX,XX €</td>
+          <td className="totalPrice">XXX,XX €</td>
           <td><Button label="retirer" colorCode="#C30202" /></td>
         </tr>
       </tbody>

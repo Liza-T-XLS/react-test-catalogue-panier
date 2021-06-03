@@ -29,9 +29,8 @@ const Product = () => (
           <p className="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pharetra vel turpis nunc eget lorem dolor sed viverra. Pretium viverra suspendisse potenti nullam ac tortor. Vitae purus adeas pulvinar sape.</p>
           <div className="addToCart">
             <form className="addToCartForm">
-              <QuantitySelect maxQuantity="10" />
+              <QuantitySelect maxQuantity="10" selectValue="3" />
               <Button label="Ajouter au panier" colorCode="#419641" />
-              {/* <button className="addToCartButton" type="submit">Ajouter au panier</button> */}
             </form>
           </div>
         </div>
