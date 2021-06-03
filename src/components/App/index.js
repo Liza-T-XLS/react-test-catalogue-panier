@@ -1,16 +1,31 @@
 // == Import npm
 import React from 'react';
+import { Route, Switch } from 'react-router-dom';
 
 // == Import
 import './app.scss';
 import Header from '../Header';
 import Catalog from '../Catalog';
+import Cart from '../Cart';
 
 // == Component
 const App = () => (
   <div className="app">
     <Header />
-    <Catalog />
+    <Switch>
+      <Route
+        path="/"
+        exact
+      >
+        <Catalog />
+      </Route>
+      <Route
+        path="/cart"
+        exact
+      >
+        <Cart />
+      </Route>
+    </Switch>
   </div>
 );
 

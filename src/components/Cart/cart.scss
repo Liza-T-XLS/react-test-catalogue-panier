@@ -1,0 +1,28 @@
+.cart {
+  text-align: left;
+  .title {
+    margin-top: 2rem;
+    margin-left: 1rem;
+    margin-bottom: 2rem;
+    font-weight: 800;
+    font-size: 2rem;
+  }
+  .cartTable {
+    width: 100%;
+    .cartTableHeader {
+      background-color: #17A2B8;
+      height: 2rem;
+      color: white;
+      font-weight: bold;
+    }
+    .cartTableRow {
+      .productImage {
+        height: 200px;
+        width: auto;
+      }
+      button {
+        width: 10rem;
+      }
+    }
+  }
+}
