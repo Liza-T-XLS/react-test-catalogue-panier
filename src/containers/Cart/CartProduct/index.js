@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 
 import CartProduct from '../../../components/Cart/CartProduct';
 
-import { updateProductQuantity } from '../../../actions/main';
+import { updateProductQuantity, removeProductFromCart } from '../../../actions/main';
 
 const mapStateToProps = (state, ownProps) => ({
   productId: ownProps.productId,
@@ -18,6 +18,9 @@ const mapStateToProps = (state, ownProps) => ({
 const mapDispatchToProps = (dispatch) => ({
   updateProductQuantity: (productId, productQuantity) => {
     dispatch(updateProductQuantity(productId, productQuantity));
+  },
+  removeProductFromCart: (productId) => {
+    dispatch(removeProductFromCart(productId));
   },
 });
 

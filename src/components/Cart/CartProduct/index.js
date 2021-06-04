@@ -17,12 +17,18 @@ const CartProduct = ({
   productPrice,
   totalPrice,
   updateProductQuantity,
+  removeProductFromCart,
 }) => {
   const onChangeHandler = (e) => {
     updateProductQuantity(
       productId,
       e.target.value,
     );
+  };
+
+  const onSubmitHandler = (e) => {
+    e.preventDefault();
+    removeProductFromCart(productId);
   };
 
   const arr = [];
@@ -44,7 +50,7 @@ const CartProduct = ({
       </td>
       <td>{productPrice}</td>
       <td className="totalPrice">{totalPrice} €</td>
-      <td><Button label="retirer" colorCode="#C30202" /></td>
+      <td><form onSubmit={onSubmitHandler}><Button label="retirer" colorCode="#C30202" /></form></td>
     </tr>
   );
 };
@@ -59,6 +65,7 @@ CartProduct.propTypes = {
   productPrice: PropTypes.number.isRequired,
   totalPrice: PropTypes.number.isRequired,
   updateProductQuantity: PropTypes.func.isRequired,
+  removeProductFromCart: PropTypes.func.isRequired,
 };
 
 // == Export

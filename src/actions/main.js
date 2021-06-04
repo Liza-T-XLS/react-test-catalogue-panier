@@ -4,6 +4,7 @@ export const LOAD_PRODUCTS = 'LOAD_PRODUCTS';
 export const SAVE_PRODUCTS = 'SAVE_PRODUCTS';
 export const SAVE_PRODUCT_TO_CART = 'SAVE_PRODUCT_TO_CART';
 export const UPDATE_PRODUCT_QUANTITY = 'UPDATE_PRODUCT_QUANTITY';
+export const REMOVE_PRODUCT_FROM_CART = 'REMOVE_PRODUCT_FROM_CART';
 
 // == action creators
 
@@ -35,4 +36,9 @@ export const updateProductQuantity = (productId, productQuantity) => ({
   type: UPDATE_PRODUCT_QUANTITY,
   productId,
   productQuantity,
+});
+
+export const removeProductFromCart = (productId) => ({
+  type: REMOVE_PRODUCT_FROM_CART,
+  productId,
 });

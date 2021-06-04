@@ -1,10 +1,17 @@
+/* eslint-disable max-len */
+/* eslint-disable no-case-declarations */
 /* eslint-disable no-else-return */
 /* eslint-disable implicit-arrow-linebreak */
 /* eslint-disable no-confusing-arrow */
 
 // == Imports
 
-import { SAVE_PRODUCTS, SAVE_PRODUCT_TO_CART, UPDATE_PRODUCT_QUANTITY } from '../actions/main';
+import {
+  SAVE_PRODUCTS,
+  SAVE_PRODUCT_TO_CART,
+  UPDATE_PRODUCT_QUANTITY,
+  REMOVE_PRODUCT_FROM_CART,
+} from '../actions/main';
 
 // == Initial state
 
@@ -65,6 +72,12 @@ const mainReducer = (state = initialState, action = {}) => {
         cart: updatedNewCartArray,
       };
     }
+    case REMOVE_PRODUCT_FROM_CART:
+      const newCartArray = [...state.cart.filter((product) => product.productId !== action.productId)];
+      return {
+        ...state,
+        cart: newCartArray,
+      };
     default: return state;
   }
 };

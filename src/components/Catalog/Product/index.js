@@ -80,7 +80,7 @@ const Product = ({
                   ))
                 };
                 </select>
-                <Button label="Ajouter au panier" colorCode="#419641" />
+                <Button label="Ajouter au panier" colorCode="#419641" buttonType="submit" />
               </form>
             </div>
           </div>
