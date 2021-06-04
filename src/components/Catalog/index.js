@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 // == Imports
 
 import './catalog.scss';
-import Product from './Product';
+import Product from '../../containers/Catalog/Product';
 
 // == Component
 
