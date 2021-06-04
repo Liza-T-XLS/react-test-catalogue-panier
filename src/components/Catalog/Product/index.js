@@ -14,6 +14,7 @@ import clock from '../../../assets/images/clock.svg';
 import smile from '../../../assets/images/smile.svg';
 import players from '../../../assets/images/players.svg';
 import Button from '../../Button';
+import { priceRounderWithComma } from '../../../utils';
 
 // == Component
 
@@ -68,7 +69,7 @@ const Product = ({
               <li className="productSpecification"><img className="specificationIcon" src={smile} alt="" /><span className="specificationLabel">De {product_age_min} à {product_age_max} ans</span></li>
               <li className="productSpecification"><img className="specificationIcon" src={players} alt="" /><span className="specificationLabel">Entre {product_player_min} et {product_player_max} joueurs</span></li>
             </ul>
-            <span className="productPrice">{product_price} €</span>
+            <span className="productPrice">{priceRounderWithComma(product_price)} €</span>
           </div>
           <div className="productShortDesc">
             <p className="description">{product_short_desc}</p>
