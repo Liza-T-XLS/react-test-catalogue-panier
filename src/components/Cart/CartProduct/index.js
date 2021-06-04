@@ -1,9 +1,12 @@
 /* eslint-disable no-plusplus */
 
-// == Import npm
+// == Imports npm
 
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
+
+// == Imports
 
 import Button from '../../Button';
 
@@ -39,7 +42,7 @@ const CartProduct = ({
   return (
     <tr key={productId} className="cartTableRow">
       <td><img className="productImage" src={productImg} alt="productImage" /></td>
-      <td>{productName}</td>
+      <td><Link to="/" title="catalog">{productName}</Link></td>
       <td>
         <select className="productQuantity" value={productQuantity} onChange={onChangeHandler}>{
           arr.map((arrRow) => (
