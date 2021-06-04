@@ -8,7 +8,7 @@ import {
 } from '../../../actions/main';
 
 const mapStateToProps = (state) => ({
-
+  cart: state.cart,
 });
 
 const mapDispatchToProps = (dispatch) => ({

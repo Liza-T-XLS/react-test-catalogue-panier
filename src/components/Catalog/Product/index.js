@@ -29,8 +29,14 @@ const Product = ({
   product_price,
   product_short_desc,
   saveProductToCart,
+  cart,
 }) => {
-  const [selectValue, setSelectValue] = useState(1);
+  const isProductInCart = cart.find((product) => product.productId === product_id);
+  let productQuantity = 1;
+  if (isProductInCart) {
+    productQuantity = isProductInCart.productQuantity;
+  }
+  const [selectValue, setSelectValue] = useState(productQuantity);
 
   const onChangeHandler = (e) => {
     setSelectValue(e.target.value);
@@ -97,6 +103,7 @@ Product.propTypes = {
   product_price: PropTypes.number.isRequired,
   product_short_desc: PropTypes.string.isRequired,
   saveProductToCart: PropTypes.func.isRequired,
+  cart: PropTypes.array.isRequired,
 };
 
 // == Export
