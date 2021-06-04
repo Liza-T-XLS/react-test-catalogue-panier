@@ -1,0 +1,25 @@
+.cartTotal {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #ECECEC;
+  width: 20%;
+  height: 7rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  .cartTotalPrice {
+    display: flex;
+    justify-content: space-between;
+    span {
+      display: inline-block;
+      font-weight: bold;
+    }
+  }
+  button {
+    width: 80%;
+    display: inline-block;
+    align-self: center;
+  }
+}

@@ -8,32 +8,37 @@
     font-weight: 800;
     font-size: 2rem;
   }
-  .cartTable {
-    width: 100%;
-    td {
-      vertical-align: middle;
-      text-align: center;
-      padding: 1rem;
-    }
-    .cartTableHeader {
-      background-color: #17A2B8;
-      height: 3rem;
-      color: white;
-      font-weight: bold;
-      margin-bottom: 1rem;
-      border-bottom: 2px solid black;
-    }
-    .cartTableRow {
-      border-bottom: 1px solid #ECECEC;
-      .productImage {
-        height: 200px;
-        width: auto;
+  .cartDetails {
+    // display: flex;
+    // justify-content: space-between;
+    position: relative;
+    .cartTable {
+      width: 70%;
+      td {
+        vertical-align: middle;
+        text-align: center;
+        padding: 1rem;
       }
-      button {
-        width: 10rem;
-      }
-      .totalPrice {
+      .cartTableHeader {
+        background-color: #17A2B8;
+        max-height: 3rem;
+        color: white;
         font-weight: bold;
+        margin-bottom: 1rem;
+        border-bottom: 2px solid black;
+      }
+      .cartTableRow {
+        border-bottom: 1px solid #ECECEC;
+        .productImage {
+          height: 200px;
+          width: auto;
+        }
+        button {
+          width: 10rem;
+        }
+        .totalPrice {
+          font-weight: bold;
+        }
       }
     }
   }
