@@ -5,7 +5,7 @@ import { Route, Switch } from 'react-router-dom';
 // == Import
 import './app.scss';
 import Header from '../Header';
-import Catalog from '../Catalog';
+import Catalog from '../../containers/Catalog';
 import Cart from '../Cart';
 
 // == Component
