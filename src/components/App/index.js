@@ -6,7 +6,7 @@ import { Route, Switch } from 'react-router-dom';
 import './app.scss';
 import Header from '../Header';
 import Catalog from '../../containers/Catalog';
-import Cart from '../Cart';
+import Cart from '../../containers/Cart';
 
 // == Component
 const App = () => (
