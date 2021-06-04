@@ -32,7 +32,7 @@ const Cart = ({ cart }) => (
           ))}
         </tbody>
       </table>
-      <CartTotal />
+      <CartTotal cart={cart} />
     </div>
   </div>
 );

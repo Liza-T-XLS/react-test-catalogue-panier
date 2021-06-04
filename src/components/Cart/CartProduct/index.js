@@ -51,8 +51,8 @@ const CartProduct = ({
         };
         </select>
       </td>
-      <td>{productPrice}</td>
-      <td className="totalPrice">{totalPrice} €</td>
+      <td>{productPrice}&nbsp;€</td>
+      <td className="totalPrice">{totalPrice}&nbsp;€</td>
       <td><form onSubmit={onSubmitHandler}><Button label="retirer" colorCode="#C30202" /></form></td>
     </tr>
   );
