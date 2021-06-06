@@ -33,6 +33,7 @@
         font-weight: 400;
       }
       .cartTableRow {
+        opacity: 1;
         border-bottom: 1px solid $lightColor;
         .productImage {
           height: 200px;
@@ -55,6 +56,10 @@
           height: 2.25rem;
           font-weight: 500;
         }
+      }
+      .removed {
+        transition: all 0.5s ease-out;
+        opacity: 0;
       }
     }
   }

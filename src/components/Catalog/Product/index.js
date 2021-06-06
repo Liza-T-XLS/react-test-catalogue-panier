@@ -43,6 +43,8 @@ const Product = ({
     setSelectValue(e.target.value);
   };
 
+  // array created in order to automatically generate options in productQuantity select
+  // (number of elements in array will equal number of options)
   const arr = [];
   const maxQuantity = 10;
   for (let quantity = 1; quantity <= maxQuantity; quantity++) {
@@ -75,8 +77,8 @@ const Product = ({
             <p className="description">{product_short_desc}</p>
             <div className="addToCart">
               <form className="addToCartForm" action="/cart" onSubmit={onSubmitHandler}>
-                <label htmlFor="productQuantity">
-                  <select id="productQuantity" className="productQuantity" value={selectValue} onChange={onChangeHandler}>{
+                <label htmlFor="productQuantityCatalog">
+                  <select id="productQuantityCatalog" className="productQuantity" value={selectValue} onChange={onChangeHandler}>{
                     arr.map((arrRow) => (
                       <option key={arrRow} value={arrRow}>{arrRow}</option>
                     ))

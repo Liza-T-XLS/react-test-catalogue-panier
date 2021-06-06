@@ -2,15 +2,15 @@
 
 // == Imports npm
 
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
 // == Imports
 
+import classNames from 'classnames';
 import Button from '../../Button';
 import { priceRounderWithComma } from '../../../utils';
-import '../../../styles/_vars.scss';
 
 // == Component
 
@@ -24,6 +24,10 @@ const CartProduct = ({
   updateProductQuantity,
   removeProductFromCart,
 }) => {
+  const [productIsInCart, setProductIsInCart] = useState(true);
+
+  const cartTableRowClassName = classNames('cartTableRow', { removed: !productIsInCart });
+
   const onChangeHandler = (e) => {
     updateProductQuantity(
       productId,
@@ -33,25 +37,33 @@ const CartProduct = ({
 
   const onSubmitHandler = (e) => {
     e.preventDefault();
-    removeProductFromCart(productId);
+    setProductIsInCart(false);
+    setTimeout(() => {
+      removeProductFromCart(productId);
+    }, 500);
   };
 
+  // array created in order to automatically generate options in productQuantity select
+  // (number of elements in array will equal number of options)
   const arr = [];
   const maxQuantity = 10;
   for (let quantity = 1; quantity <= maxQuantity; quantity++) {
     arr.push(quantity);
   }
+
   return (
-    <tr key={productId} className="cartTableRow">
+    <tr key={productId} className={cartTableRowClassName}>
       <td><img className="productImage" src={productImg} alt="productImage" /></td>
       <td className="productName"><Link to="/" title="catalog">{productName}</Link></td>
       <td>
-        <select className="productQuantity" value={productQuantity} onChange={onChangeHandler}>{
-          arr.map((arrRow) => (
-            <option key={arrRow} value={arrRow}>{arrRow}</option>
-          ))
-        };
-        </select>
+        <label htmlFor="productQuantityCart">
+          <select id="productQuantityCart" className="productQuantity" value={productQuantity} onChange={onChangeHandler}>{
+            arr.map((arrRow) => (
+              <option key={arrRow} value={arrRow}>{arrRow}</option>
+            ))
+          };
+          </select>
+        </label>
       </td>
       <td className="productPrice">{priceRounderWithComma(productPrice)}&nbsp;€</td>
       <td className="totalPrice">{priceRounderWithComma(totalPrice)}&nbsp;€</td>
