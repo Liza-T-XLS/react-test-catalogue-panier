@@ -19,7 +19,7 @@ const Cart = ({ cart }) => (
     <div className="cartDetails">
       <table className="cartTable">
         <tbody>
-          <tr className="cartTableHeader">
+          <tr className="cartTableHeader" id="cartTableHeader">
             <td>&nbsp;</td>
             <td>&nbsp;</td>
             <td>Quantité</td>

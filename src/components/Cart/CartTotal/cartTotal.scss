@@ -1,10 +1,13 @@
+@import '../../../styles/vars';
+
 .cartTotal {
   position: absolute;
   top: 0;
   right: 0;
-  background-color: #ECECEC;
+  background-color: $lightColor;
   width: 20%;
-  height: 7rem;
+  height: 8rem;
+  border-radius: 4px;
   padding: 1rem;
   display: flex;
   flex-direction: column;
@@ -12,14 +15,23 @@
   .cartTotalPrice {
     display: flex;
     justify-content: space-between;
+    .cartTotalLabel {
+      font-size: 1.25rem;
+      font-weight: 600;
+    }
+    .cartTotalAmount {
+      font-size: 1.25rem;
+      font-weight: 700;
+    }
     span {
       display: inline-block;
       font-weight: bold;
     }
   }
-  button {
+  .button {
     width: 80%;
     display: inline-block;
     align-self: center;
+    font-weight: 500;
   }
 }

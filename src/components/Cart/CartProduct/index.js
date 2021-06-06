@@ -10,6 +10,7 @@ import { Link } from 'react-router-dom';
 
 import Button from '../../Button';
 import { priceRounderWithComma } from '../../../utils';
+import '../../../styles/_vars.scss';
 
 // == Component
 
@@ -43,7 +44,7 @@ const CartProduct = ({
   return (
     <tr key={productId} className="cartTableRow">
       <td><img className="productImage" src={productImg} alt="productImage" /></td>
-      <td><Link to="/" title="catalog">{productName}</Link></td>
+      <td className="productName"><Link to="/" title="catalog">{productName}</Link></td>
       <td>
         <select className="productQuantity" value={productQuantity} onChange={onChangeHandler}>{
           arr.map((arrRow) => (
@@ -52,7 +53,7 @@ const CartProduct = ({
         };
         </select>
       </td>
-      <td>{priceRounderWithComma(productPrice)}&nbsp;€</td>
+      <td className="productPrice">{priceRounderWithComma(productPrice)}&nbsp;€</td>
       <td className="totalPrice">{priceRounderWithComma(totalPrice)}&nbsp;€</td>
       <td><form onSubmit={onSubmitHandler}><Button label="retirer" colorCode="#C30202" /></form></td>
     </tr>

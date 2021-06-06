@@ -75,12 +75,14 @@ const Product = ({
             <p className="description">{product_short_desc}</p>
             <div className="addToCart">
               <form className="addToCartForm" action="/cart" onSubmit={onSubmitHandler}>
-                <select className="productQuantity" value={selectValue} onChange={onChangeHandler}>{
-                  arr.map((arrRow) => (
-                    <option key={arrRow} value={arrRow}>{arrRow}</option>
-                  ))
-                };
-                </select>
+                <label htmlFor="productQuantity">
+                  <select id="productQuantity" className="productQuantity" value={selectValue} onChange={onChangeHandler}>{
+                    arr.map((arrRow) => (
+                      <option key={arrRow} value={arrRow}>{arrRow}</option>
+                    ))
+                  };
+                  </select>
+                </label>
                 <Button label="Ajouter au panier" colorCode="#419641" buttonType="submit" />
               </form>
             </div>

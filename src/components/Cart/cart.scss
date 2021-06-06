@@ -1,7 +1,9 @@
+@import '../../styles/vars';
+
 .cart {
   text-align: left;
-  margin-left: 1rem;
-  margin-right: 1rem;
+  margin-left: $mainComponentSideMargin;
+  margin-right: $mainComponentSideMargin;
   .title {
     margin-top: 2rem;
     margin-bottom: 2rem;
@@ -18,24 +20,40 @@
         padding: 1rem;
       }
       .cartTableHeader {
-        background-color: #17A2B8;
+        font-family: 'Roboto', sans-serif;
+        font-size: 0.875rem;
+        background-color: $cartMainColor;
         max-height: 3rem;
         color: white;
         font-weight: bold;
         margin-bottom: 1rem;
         border-bottom: 2px solid black;
       }
+      #cartTableHeader {
+        font-weight: 400;
+      }
       .cartTableRow {
-        border-bottom: 1px solid #ECECEC;
+        border-bottom: 1px solid $lightColor;
         .productImage {
           height: 200px;
           width: auto;
         }
-        button {
-          width: 10rem;
+        .productName {
+          font-size: 1.125rem;
+          font-weight: 500;
+        }
+        .productPrice {
+          font-size: 0.875rem;
+          font-weight: 500;
         }
         .totalPrice {
-          font-weight: bold;
+          font-size: 1rem;
+          font-weight: 700;
+        }
+        .button {
+          width: 4rem;
+          height: 2.25rem;
+          font-weight: 500;
         }
       }
     }

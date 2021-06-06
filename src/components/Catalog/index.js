@@ -18,9 +18,11 @@ const Catalog = ({ loadProducts, products }) => {
   return (
     <div className="catalog">
       <h1 className="title">Catalogue de jeux de société</h1>
-      {products.map((product) => (
-        <Product key={product.product_id} {...product} />
-      ))}
+      <div className="products">
+        {products.map((product) => (
+          <Product key={product.product_id} {...product} />
+        ))}
+      </div>
     </div>
   );
 };

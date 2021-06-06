@@ -17,7 +17,7 @@ const CartTotal = ({ cart }) => {
   return (
     <div className="cartTotal">
       <div className="cartTotalPrice">
-        <span>TOTAL :&nbsp;</span><span>{priceRounderWithComma(cartTotalPrice)}&nbsp;€</span>
+        <span className="cartTotalLabel">TOTAL :&nbsp;</span><span className="cartTotalAmount">{priceRounderWithComma(cartTotalPrice)}&nbsp;€</span>
       </div>
       <Button label="Valider le panier" colorCode="#17A2B8" />
     </div>
